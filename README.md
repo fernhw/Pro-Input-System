@@ -5,19 +5,31 @@ keep hold of controller profiles,
 swap between them, map buttons in-game.
 Unity doesn't have this out of the box WHY!?
 
-Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axis without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest not have it, it's awful.
+Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axis without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.
 
 I tried other controller systems and none gave me the control I wanted, they all where egh.
 
-Now! This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo joycons.
+Now! This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo JOYCONs but I want to have it eventually detect these and change profiles on the fly.
 
 ## Getting Started
 ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem, the main joystick controller, the keyboard and mouse counterpart, and another keyboard and mouse based controller. Why 2 pc controllers? to have ALTERNATIVE keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.
 
 After set up is complete all you need is:
+
 ```
-        /Assets/STARTING_UP/InputManager.asset
+        if (ProInput.UpDpad) {
+            //Do stuff
+        }
 ```
+
+Or,
+```
+        if (ProInput.L) {
+            //Shoot
+        }
+```
+
+Simplify the commands in the game so you don't have to go through the insanity.
 
 # Let's Begin
 ### Step1 
@@ -47,64 +59,88 @@ All set up, now we Init the system:
 
 In the Start of your project:
 ```
-ProInput.Init();
+    ProInput.Init();
 ```
 
 And to Update:
 ```
-//delta being what you have for delta it usually is Time.deltaTime
-ProInput.UpdateInput(delta);
+    //delta being what you have for delta it usually is Time.deltaTime
+    ProInput.UpdateInput(delta);
 ```
 
 simpler example:
 
 ```
-  void Start() {
-    ProInput.Init();
-  }
-  private void Update() {
-    ProInput.UpdateInput(Time.deltaTime);
-  }
+    void Start() {
+         ProInput.Init();
+    }
+        private void Update() {
+        ProInput.UpdateInput(Time.deltaTime);
+    }
 ```
 
 ### Step4 
 Setting up. Go to Models/ControllerHub
 You will see this.
 ```
-  namespace ProInputSystem {
-      public static class ControllerHub {
-          public static IController MainController = new Controller(Profiles.XBOX_360_PC);
-          public static IController PCInput = new Controller(Profiles.AMYSESCAPE);
-          public static IController PCInputAlt = new Controller(Profiles.AMYSESCAPE_ALT);
-      }
-  }
+    namespace ProInputSystem {
+        public static class ControllerHub {
+            public static IController MainController = new Controller(Profiles.XBOX_360_PC);
+            public static IController PCInput = new Controller(Profiles.AMYSESCAPE);
+            public static IController PCInputAlt = new Controller(Profiles.AMYSESCAPE_ALT);
+        }
+    }
 ```
 Long story short Models/ControllerHub is YOUR HUB it is the place where you pick controllers, now in this case the system has controller profiles for a game I'm working on, Amy's Escape, you probably want YOUR GAME's controls in here, you can also create your own controller hub, and controller profiles in your game's code.
 
 ``` 
-public static IController MainController = new Controller(Profiles.XBOX_360_PC);
-//or
-public static IController MainController = new Controller(Profiles.XBOX_360_MAC);
-//or even
-public static IController MainController = new Controller(Profiles.NINTENDO_SWITCH_JOYCON);
+        public static IController MainController = new Controller(Profiles.XBOX_360_PC);
+        //or
+        public static IController MainController = new Controller(Profiles.XBOX_360_MAC);
+        //or even
+        public static IController MainController = new Controller(Profiles.NINTENDO_SWITCH_JOYCON);
 ```
 
-### Installing
+### Setting Up The Profiles
+You need to set up controllers individually
+(As of v0.5 there's no in game mapping so this has to be done manually)
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+EXAMPLE: (This is an XBOX 360 controller)
 ```
-Give the example
+    public static readonly ControllerProfile XBOX_360_PC = new ControllerProfile{
+        Name = "XBOX 360 PC",
+        UpDpad = new ButtonModel(AccessType.CONTROLLER, 6, ButtonType.ANALOGUE),
+        DownDpad = new ButtonModel(AccessType.CONTROLLER, 6, ButtonType.ANALOGUE_REVERSED),
+        LeftDpad = new ButtonModel(AccessType.CONTROLLER,5, ButtonType.ANALOGUE_REVERSED),
+        RightDpad = new ButtonModel(AccessType.CONTROLLER, 5, ButtonType.ANALOGUE),
+        A = new ButtonModel(AccessType.CONTROLLER, 0),
+        B = new ButtonModel(AccessType.CONTROLLER, 1),
+        X = new ButtonModel(AccessType.CONTROLLER, 2),
+        Y = new ButtonModel(AccessType.CONTROLLER, 3),
+        L = new ButtonModel(AccessType.CONTROLLER, 4),
+        R = new ButtonModel(AccessType.CONTROLLER, 5),
+        L2 = new ButtonModel(AccessType.CONTROLLER, 2, ButtonType.ANALOGUE),
+        R2 = new ButtonModel(AccessType.CONTROLLER, 2, ButtonType.ANALOGUE_REVERSED),
+        XAxisRight = new ButtonModel(AccessType.CONTROLLER, 3, ButtonType.ANALOGUE),
+        YAxisRight = new ButtonModel(AccessType.CONTROLLER, 4, ButtonType.ANALOGUE),
+        XAxisLeft = new ButtonModel(AccessType.CONTROLLER, 0, ButtonType.ANALOGUE),
+        YAxisLeft = new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE),
+        JoyClickLeft = new ButtonModel(AccessType.CONTROLLER,8),
+        JoyClickRight = new ButtonModel(AccessType.CONTROLLER,9),
+        Start = new ButtonModel(AccessType.CONTROLLER, 7),
+        Select = new ButtonModel(AccessType.CONTROLLER, 6),
+    };
 ```
-
-And repeat
-
+It's index based AKA it works based on the key ID like regular controllers.
+Each key in a controller has an id and these can be in different ports unlike
+Unity's:
 ```
-until finished
+KeyCode.Joystick8Button19 // Controller 8 button 19,and God help you if it changes places.
 ```
-
+it's:
+```
+(AccessType.CONTROLLER, 19) //Type=Controller index=19 for anywhere the control is inputted
+```
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
