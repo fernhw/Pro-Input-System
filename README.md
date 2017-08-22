@@ -1,8 +1,8 @@
 # ProInput 0.5 <br/><br/>
 ### by fernhw (@fern_hw, fernhw.com)
 * Manage Controllers in unity!<br/>
-* keep hold of controller profiles,<br/>
-* swap between them, map buttons in-game.<br/>
+* Keep hold of controller profiles,<br/>
+* Swap between them, map buttons in-game.<br/>
 Unity doesn't have this out of the box WHY!? I Don't Know...<br/>
 
 Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axes without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.<br/>
@@ -27,7 +27,7 @@ This is still in development and at the moment the thing is not where I want it 
 ## Getting Started
 ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem, the main joystick controller, the keyboard and mouse counterpart, and another keyboard and mouse based controller. Why 2 pc controllers? to have ALTERNATIVE keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.<br/>
 
-After set up is complete all you need is:<br/>
+* After set up is complete all you need is:<br/>
 
 ```
         if (ProInput.UpDpad) {
@@ -35,7 +35,7 @@ After set up is complete all you need is:<br/>
         }
 ```
 
-Or,
+* Or,
 ```
         if (ProInput.L) {
             //Shoot
