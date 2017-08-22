@@ -156,30 +156,35 @@ Each Button in a controller has an id and these can be in different ports unlike
 Unity's:
 Example 1:
 ```
-        new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE)
-        //Type=Controller index=1 buttonType=Analogue 
-        
+       <b> new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE)</b>
+       
+        //Type=Controller index=1 buttonType=Analogue         
         //This means the Axis is from a controller, it's index is 1, and it's a Joystick
 ```
 Example 2:
 ```
-        new ButtonModel(AccessType.CONTROLLER, 7,ButtonType.BUTTON)
+        <b>new ButtonModel(AccessType.CONTROLLER, 7,ButtonType.BUTTON)</b>
+        
         //Type=Controller index=1 buttonType=Button        
         //This means the button is from a controller, it's index is 7, and it's a Button
         
         new ButtonModel(AccessType.CONTROLLER, 7)
+        
         //This is also acceptable as buttonModels are Buttons by default
 ```
 Example 3:
 ```
-        new ButtonModel(AccessType.PC, 31)
+        <b>new ButtonModel(AccessType.PC, 31)</b> 
+        
         //Type=PC index=31 buttonType=Button        
-        //This means the button is from the computer (keyboard or mouse), it's index is 31, and it's a Button.
+        //This means the button is from the computer (keyboard or mouse),
+        //it's index is 31, and it's a Button.
 ```
 Example 4:
 ```
-        new ButtonModel(AccessType.CONTROLLER, 2, ButtonType.ANALOGUE_REVERSED)
-        //Type=Controller index=2 buttonType=Analogue Reversed       
+        <b>new ButtonModel(AccessType.CONTROLLER, 2, ButtonType.ANALOGUE_REVERSED)</b>
+        
+        //Type=Controller index=2 buttonType=Analogue Reversed               
         //This means the Axis is from a controller, it's index is 2, and it's a Joystick.
         //The difference here is that the ANALOGUE_REVERSED button type reverses the axis.
         //This is useful when you want to grab a joystick angle as a button which the system does.
@@ -193,28 +198,13 @@ If proInput is set up and you press F12 during runtime you will get this in the 
         "-- Press Any Key, Or touch any Stick --"
 ```
 Press ANY KEY or Move ANY Joystick either from the keyboard or controller in hand.
+You get this:
+```
+        new ButtonModel(AccessType.PC, 128, ButtonType.BUTTON))
+```
 
-```
-        pressed, Keyboard, index = 112
-```
-It will have the data you need to fill a ButtonModel 
-```
-        new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE)
-```
 ButtonModel it's an abstract class to create a button, buttons need 3 pieces of data.
 Accesstype
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ### And coding style tests
 
@@ -224,36 +214,20 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* Unity
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Fernando Holguin W** - *Amy's Escape* - [@fern_hw](https://github.com/fernhw)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
