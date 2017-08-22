@@ -5,11 +5,13 @@ keep hold of controller profiles,
 swap between them, map buttons in-game.
 Unity doesn't have this out of the box WHY!?
 
-Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axis without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.
+Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axes without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.
 
-I tried other controller systems and none gave me the control I wanted, they all where egh.
+I tried other controller systems and none gave me the control I wanted, they all where all, no.
 
-Now! This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo JOYCONs but I want to have it eventually detect these and change profiles on the fly.
+This was created for OOP programmers like myself who want a good ammount of customization and control this is not for beginners looking for an easy way. Help me improve this and make it better, tools for people like us tend to not be very good.
+
+This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo JOYCONs but I want to have it eventually detect these and change profiles on the fly.
 
 ## Getting Started
 ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem, the main joystick controller, the keyboard and mouse counterpart, and another keyboard and mouse based controller. Why 2 pc controllers? to have ALTERNATIVE keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.
@@ -28,6 +30,7 @@ Or,
             //Shoot
         }
 ```
+This picks up UpDpad or L from all 3 controller profiles you can swap with both controller and your keyboard, after the profile set up you don't have to think of keycodes, or axes or insanity, just worry about what's important.
 
 Simplify the commands in the game so you don't have to go through the insanity.
 
