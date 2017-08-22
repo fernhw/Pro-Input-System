@@ -86,12 +86,12 @@ You will see this.
     namespace ProInputSystem {
         public static class ControllerHub {
             public static IController MainController = new Controller(Profiles.XBOX_360_PC);
-            public static IController PCInput = new Controller(Profiles.AMYSESCAPE);
-            public static IController PCInputAlt = new Controller(Profiles.AMYSESCAPE_ALT);
+            public static IController PCInput = new Controller(Profiles.PC_MAC);
+            public static IController PCInputAlt = new Controller(Profiles.PC_MAC_ALT);
         }
     }
 ```
-Long story short Models/ControllerHub is YOUR HUB it is the place where you pick controllers, now in this case the system has controller profiles for a game I'm working on, Amy's Escape, you probably want YOUR GAME's controls in here, you can also create your own controller hub, and controller profiles in your game's code.
+Long story short Models/ControllerHub is YOUR HUB it is the place where you pick controllers, now in this case the system has controller profiles for a game I'm working on, you probably want YOUR GAME's controls in here, you can also create your own controller hub, and controller profiles in your game's code.
 
 ``` 
         public static IController MainController = new Controller(Profiles.XBOX_360_PC);
