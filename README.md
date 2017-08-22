@@ -192,12 +192,13 @@ Example 4:
 
 ###             BUT How do I get the Index? you ask?
 Simple as long as Debug is Enabled F12 acts as an input mapper of sorts, ProInputOptions.DEBUG_ENABLED is true by default.
-If proInput is set up and you press F12 during runtime you will get this in the console.
+
+* If proInput is set up and you press F12 during runtime you will get this in the console.
 
 ```
         "-- Press Any Key, Or touch any Stick --"
 ```
-Press ANY KEY or Move ANY Joystick either from the keyboard or controller in hand.
+* Press ANY KEY or Move ANY Joystick either from the keyboard or controller in hand.
 You get this:
 ```
         new ButtonModel(AccessType.PC, 128, ButtonType.BUTTON))
