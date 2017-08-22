@@ -1,45 +1,63 @@
-# ProInput 0.5 by fernhw (@fern_hw, fernhw.com)
+# ProInput 0.5 
+### by fernhw (@fern_hw, fernhw.com)
 Manage Controllers in unity!
 keep hold of controller profiles,
 swap between them, map buttons in-game.
+Unity doesn't have this out of the box WHY!?
 
-Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axis without having to go through several hoops, and going through unity's regular controller mapping box is a pain if you want to, and let's be honest not have it, it's awful.
+Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axis without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest not have it, it's awful.
 
-I tried other controller systems and none gave me the control I wanted, they all sucked. Now this is still in development and at the moment the thing is not complete, it works you can map controllers with the files in the Models folder, give it a whirl.
+I tried other controller systems and none gave me the control I wanted, they all where egh.
+
+Now! This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo joycons.
 
 ## Getting Started
-ProInput system is simple to use once it's set up. The system has 3 controllers that run in tandem, the main joystick controller, the keyboard and mouse counterpart, and another keyboard and mouse based controller. Why 2 pc controllers? to have ALTERNATIVE keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.
+ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem, the main joystick controller, the keyboard and mouse counterpart, and another keyboard and mouse based controller. Why 2 pc controllers? to have ALTERNATIVE keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.
 
+After set up is complete all you need is:
+```
+        /Assets/STARTING_UP/InputManager.asset
+```
 
+# Let's Begin
 ### Step1 
 First of all load this in your project, don't worry it wont bite, it's in it's own namespace titled ProInputSystem, comes with a class outside of the namespace called ProInput, that's your access point.
 
 ### Step2
 ### IMPORTANT
-Open the folder STARTING_UP inside it theres a file calle InputManager.asset
-```
+Open the folder STARTING_UP inside it theres a file called InputManager.asset
+
 Copy
-[Project]/Assets/STARTING_UP/InputManager.asset
+```
+        /Assets/STARTING_UP/InputManager.asset
 ```
 
-now copy that file, and paste it in your ProjectSettings folder 
+Now copy that file, and paste it in your ProjectSettings folder 
 (next to your assets folder, you need to open the project directory)
+
+Paste and REPLACE to
 ```
-Paste and REPLACE
-[Project]/ProjectSettings/InputManager.asset
+        /ProjectSettings/InputManager.asset
 ```
+
 Unity asks you to manually tell it which Axes the project needs.
 
 ### Step3
-Init the system: 
+All set up, now we Init the system: 
+
+In the Start of your project:
 ```
 ProInput.Init();
 ```
-delta being what you have for delta it usually is Time.deltaTime
+
+And to Update:
 ```
+//delta being what you have for delta it usually is Time.deltaTime
 ProInput.UpdateInput(delta);
 ```
-simpler example
+
+simpler example:
+
 ```
   void Start() {
     ProInput.Init();
@@ -51,7 +69,7 @@ simpler example
 
 ### Step4 
 Setting up. Go to Models/ControllerHub
-You will see this
+You will see this.
 ```
   namespace ProInputSystem {
       public static class ControllerHub {
