@@ -1,9 +1,9 @@
 # ProInput 0.5 <br/><br/>
 ### by fernhw (@fern_hw, fernhw.com)
-Manage Controllers in unity!<br/>
-keep hold of controller profiles,<br/>
-swap between them, map buttons in-game.<br/>
-Unity doesn't have this out of the box WHY!?<br/>
+* Manage Controllers in unity!<br/>
+* keep hold of controller profiles,<br/>
+* swap between them, map buttons in-game.<br/>
+Unity doesn't have this out of the box WHY!? I Don't Know...<br/>
 
 Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axes without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.<br/>
 
@@ -15,14 +15,14 @@ This is still in development and at the moment the thing is not where I want it 
 
 ## What special about it.
 
-It stores Controller Profiles for easy access.
-It uses active mappings of the controller and the keyboard as one.
-It stores and returns angle distance and position of joystick automatically
-It can return Joystick movements as buttons, if you press joystick up you can set it up as a button press.
-It lets you remap joysticks without having to explore all human known axises one by one.
-(Not yet) It has native remapping.
-It has a sweet set of debugging systems in it.
-It's free.
+* It stores Controller Profiles for easy access.<br/>
+* It uses active mappings of the controller and the keyboard as one.
+* It stores and returns angle distance and position of joystick automatically
+* It can return Joystick movements as buttons, if you press joystick up you can set it up as a button press.
+* It lets you remap joysticks without having to explore all human known axises one by one.
+* (Not yet) It has native remapping.
+* It has a sweet set of debugging systems in it.
+* It's free.
 
 ## Getting Started
 ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem, the main joystick controller, the keyboard and mouse counterpart, and another keyboard and mouse based controller. Why 2 pc controllers? to have ALTERNATIVE keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.<br/>
@@ -51,9 +51,9 @@ First of all load this in your project, don't worry it wont bite, it's in it's o
 
 ### Step2
 ### IMPORTANT
-Open the folder STARTING_UP inside it theres a file called InputManager.asset
+* Open the folder STARTING_UP inside it theres a file called InputManager.asset
 
-Copy
+* Copy
 ```
         /Assets/STARTING_UP/InputManager.asset
 ```
@@ -61,7 +61,7 @@ Copy
 Now copy that file, and paste it in your ProjectSettings folder 
 (next to your assets folder, you need to open the project directory)
 
-Paste and REPLACE to
+* Paste and REPLACE to
 ```
         /ProjectSettings/InputManager.asset
 ```
@@ -71,18 +71,18 @@ This is so the class can read the controller input in the joysticks.
 ### Step3
 All set up, now we Init the system: 
 
-In the Start of your project:
+* In the Start of your project:
 ```
     ProInput.Init();
 ```
 
-And to Update:
+* And to Update:
 ```
     //delta being what you have for delta it usually is Time.deltaTime
     ProInput.UpdateInput(delta);
 ```
 
-simpler example:
+* Simpler example:
 
 ```
     void Start() {
