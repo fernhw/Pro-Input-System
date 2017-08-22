@@ -1,16 +1,20 @@
-# ProInput
-Manage Controllers in unity keep hold of controller profiles, swap between them, map them and save them.
+# ProInput 0.5 by fernhw (@fern_hw, fernhw.com)
+Manage Controllers in unity!
+keep hold of controller profiles,
+swap between them, map buttons in-game.
+
+Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axis without having to go through several hoops, and going through unity's regular controller mapping box is a pain if you want to, and let's be honest not have it, it's awful.
+
+I tried other controller systems and none gave me the control I wanted, they all sucked. Now this is still in development and at the moment the thing is not complete, it works you can map controllers with the files in the Models folder, give it a whirl.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### Step1 
+First of all load this in your project, don't worry it wont bite, it's in it's own namespace titled ProInputSystem, comes with a class outside of the namespace called ProInput, that's your access point.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
+### Step2 
 ```
-Give examples
+ProInput.UpdateInput(delta);
 ```
 
 ### Installing
