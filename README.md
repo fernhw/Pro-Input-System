@@ -1,22 +1,33 @@
-# ProInput 0.5 
+# ProInput 0.5 <br/><br/>
 ### by fernhw (@fern_hw, fernhw.com)
-Manage Controllers in unity!
-keep hold of controller profiles,
-swap between them, map buttons in-game.
-Unity doesn't have this out of the box WHY!?
+Manage Controllers in unity!<br/>
+keep hold of controller profiles,<br/>
+swap between them, map buttons in-game.<br/>
+Unity doesn't have this out of the box WHY!?<br/>
 
-Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axes without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.
+Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axes without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.<br/>
 
-I tried other controller systems and none gave me the control I wanted, they all where all, no.
+I tried other controller systems and none gave me the control I wanted, they all where all, no.<br/>
 
-This was created for OOP programmers like myself who want a good ammount of customization and control this is not for beginners looking for an easy way. Help me improve this and make it better, tools for people like us tend to not be very good.
+This was created for OOP programmers like myself who want a good ammount of customization and control this is not for beginners looking for an easy way. Help me improve this and make it better, tools for people like us tend to not be very good.<br/>
 
-This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo JOYCONs but I want to have it eventually detect these and change profiles on the fly.
+This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo JOYCONs but I want to have it eventually detect these and change profiles on the fly.<br/>
+
+## What special about it.
+
+It stores Controller Profiles for easy access.
+It uses active mappings of the controller and the keyboard as one.
+It stores and returns angle distance and position of joystick automatically
+It can return Joystick movements as buttons, if you press joystick up you can set it up as a button press.
+It lets you remap joysticks without having to explore all human known axises one by one.
+(Not yet) It has native remapping.
+It has a sweet set of debugging systems in it.
+It's free.
 
 ## Getting Started
-ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem, the main joystick controller, the keyboard and mouse counterpart, and another keyboard and mouse based controller. Why 2 pc controllers? to have ALTERNATIVE keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.
+ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem, the main joystick controller, the keyboard and mouse counterpart, and another keyboard and mouse based controller. Why 2 pc controllers? to have ALTERNATIVE keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.<br/>
 
-After set up is complete all you need is:
+After set up is complete all you need is:<br/>
 
 ```
         if (ProInput.UpDpad) {
@@ -30,7 +41,7 @@ Or,
             //Shoot
         }
 ```
-This picks up UpDpad or L from all 3 controller profiles you can swap with both controller and your keyboard, after the profile set up you don't have to think of keycodes, or axes or insanity, just worry about what's important.
+This picks up UpDpad or L from all 3 controller profiles you can swap with both controller and your keyboard, after the profile set up you don't have to think of keycodes, or axes or insanity, just worry about what's important.<br/>
 
 Simplify the commands in the game so you don't have to go through the insanity.
 
@@ -82,9 +93,10 @@ simpler example:
     }
 ```
 
-### Step4 
-Setting up. Go to Models/ControllerHub
-You will see this.
+### Step4, Setting Up The Controllers.
+Setting up. Go to Models/ControllerHub<br/>
+
+You will see this. This is the 3 controllers we talked about: MainController is the Joystick based controller, your regular XBox 360 controller, PCInput is your keyboard and mouse mapped mapped with the same inputs as the main controller, and PCInputAlt is an extra keyboard controller to give the user more keys to work with.
 ```
     namespace ProInputSystem {
         public static class ControllerHub {
@@ -94,7 +106,12 @@ You will see this.
         }
     }
 ```
-Long story short Models/ControllerHub is YOUR HUB it is the place where you pick controllers, now in this case the system has controller profiles for a game I'm working on, you probably want YOUR GAME's controls in here, you can also create your own controller hub, and controller profiles in your game's code.
+Long story short Models/ControllerHub is YOUR HUB it is the place where you pick controllers, you probably want YOUR GAME's controls in here, you can also create your own controller hub, and controller profiles in your game's code.
+
+<b>Controller</b> is the abstract class that manages a full 20 input controller. this is digested by the proInput class so you never need to interact with these don't worry. A controller is created with a <b>ControllerProfile</b>
+
+In short feed OR modify a <b>ControllerProfile</b> so you can use it.
+
 
 ``` 
         public static IController MainController = new Controller(Profiles.XBOX_360_PC);
@@ -104,9 +121,9 @@ Long story short Models/ControllerHub is YOUR HUB it is the place where you pick
         public static IController MainController = new Controller(Profiles.NINTENDO_SWITCH_JOYCON);
 ```
 
-### Setting Up The Profiles
-You need to set up controllers individually
-(As of v0.5 there's no in game mapping so this has to be done manually)
+### Step 5, Setting Up The Profiles.
+You need to set up <b>ControllerProfile</b>s individually
+(As of v0.5 there's no in game mapping so this has to be done manually, the system was created for this feature.)
 
 EXAMPLE: (This is an XBOX 360 controller)
 ```
@@ -134,17 +151,58 @@ EXAMPLE: (This is an XBOX 360 controller)
         Select = new ButtonModel(AccessType.CONTROLLER, 6),
     };
 ```
-It's index based AKA it works based on the key ID like regular controllers.
-Each key in a controller has an id and these can be in different ports unlike
+It's index based it works based on the key ID like regular controllers.
+Each Button in a controller has an id and these can be in different ports unlike
 Unity's:
+Example 1:
 ```
-KeyCode.Joystick8Button19 // Controller 8 button 19,and God help you if it changes places.
+        new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE)
+        //Type=Controller index=1 buttonType=Analogue 
+        
+        //This means the Axis is from a controller, it's index is 1, and it's a Joystick
 ```
-it's:
+Example 2:
 ```
-(AccessType.CONTROLLER, 19) //Type=Controller index=19 for anywhere the control is inputted
+        new ButtonModel(AccessType.CONTROLLER, 7,ButtonType.BUTTON)
+        //Type=Controller index=1 buttonType=Button        
+        //This means the button is from a controller, it's index is 7, and it's a Button
+        
+        new ButtonModel(AccessType.CONTROLLER, 7)
+        //This is also acceptable as buttonModels are Buttons by default
 ```
-End with an example of getting some data out of the system or using it for a little demo
+Example 3:
+```
+        new ButtonModel(AccessType.PC, 31)
+        //Type=PC index=31 buttonType=Button        
+        //This means the button is from the computer (keyboard or mouse), it's index is 31, and it's a Button.
+```
+Example 4:
+```
+        new ButtonModel(AccessType.CONTROLLER, 2, ButtonType.ANALOGUE_REVERSED)
+        //Type=Controller index=2 buttonType=Analogue Reversed       
+        //This means the Axis is from a controller, it's index is 2, and it's a Joystick.
+        //The difference here is that the ANALOGUE_REVERSED button type reverses the axis.
+        //This is useful when you want to grab a joystick angle as a button which the system does.
+```
+
+###             BUT How do I get the Index? you ask?
+Simple as long as Debug is Enabled F12 acts as an input mapper of sorts, ProInputOptions.DEBUG_ENABLED is true by default.
+If proInput is set up and you press F12 during runtime you will get this in the console.
+
+```
+        "-- Press Any Key, Or touch any Stick --"
+```
+Press ANY KEY or Move ANY Joystick either from the keyboard or controller in hand.
+
+```
+        pressed, Keyboard, index = 112
+```
+It will have the data you need to fill a ButtonModel 
+```
+        new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE)
+```
+ButtonModel it's an abstract class to create a button, buttons need 3 pieces of data.
+Accesstype
 
 ## Running the tests
 
