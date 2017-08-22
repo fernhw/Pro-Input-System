@@ -52,7 +52,7 @@ Paste and REPLACE to
         /ProjectSettings/InputManager.asset
 ```
 
-Unity asks you to manually tell it which Axes the project needs.
+This is so the class can read the controller input in the joysticks.
 
 ### Step3
 All set up, now we Init the system: 
@@ -107,7 +107,7 @@ You need to set up controllers individually
 
 EXAMPLE: (This is an XBOX 360 controller)
 ```
-    public static readonly ControllerProfile XBOX_360_PC = new ControllerProfile{
+    ControllerProfile XBOX_360_PC = new ControllerProfile{
         Name = "XBOX 360 PC",
         UpDpad = new ButtonModel(AccessType.CONTROLLER, 6, ButtonType.ANALOGUE),
         DownDpad = new ButtonModel(AccessType.CONTROLLER, 6, ButtonType.ANALOGUE_REVERSED),
