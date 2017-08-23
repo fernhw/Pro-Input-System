@@ -55,7 +55,7 @@ ProInput system is simple to use once it's set up. The system has 3 controller p
 
 * This picks up UpDpad or L from all 3 controller profiles you can swap with both controller and your keyboard, after the profile set up you don't have to think of keycodes, or axes, or your sanity dripping out of your ear, just worry about what's important.<br/>
 
-* Simplify the commands in the game so you don't have to go through the insanity.
+* Simplify the input commands in the game so you worry only about the game.
 
 # Let's Begin
 ### Step1 
