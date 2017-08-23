@@ -5,11 +5,11 @@
 * Swap between them, map buttons in-game.<br/>
 Unity doesn't have this out of the box WHY!? I Don't Know...<br/>
 
-Unity's input system to put it in simple therms, sucks, you can't save controllers or even have full control of simple stuff like joystick axes without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.<br/>
+Unity's input system to put it in simple terms, sucks, you can't save controllers or even have full control of simple stuff like joystick axes without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.<br/>
 
 I tried other controller systems and none gave me the control I wanted, they all where all, no.<br/>
 
-This was created for OOP programmers like myself who want a good ammount of customization and control this is not for beginners looking for an easy way. Help me improve this and make it better, tools for people like us tend to not be very good.<br/>
+This was created for OOP programmers like myself who want a good amount of customization and control this is not for beginners looking for an easy way. Help me improve this and make it better, tools for people like us tend to not be very good.<br/>
 
 This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo JOYCONs but I want to have it eventually detect these and change profiles on the fly.<br/>
 
@@ -30,7 +30,7 @@ ProInput system is simple to use once it's set up. The system has 3 controller p
 * After set up is complete all you need is:<br/>
 
 ```
-        if (ProInput.UpDpad) {
+        if (ProInput.UpDpad) { 
             //Do stuff
         }
 ```
@@ -41,6 +41,18 @@ ProInput system is simple to use once it's set up. The system has 3 controller p
             //Shoot
         }
 ```
+
+* Combined action, the reason why this system was a must make for me.
+```
+//Pressing UP in the DPad, or Key UP, or W (Wasd) will return true
+        if (ProInput.UpDpad) { 
+            //Do stuff
+        }
+//Professional games have multiple inputs so people get to change quickly to their pcs without a moment's notice.
+```
+
+
+
 This picks up UpDpad or L from all 3 controller profiles you can swap with both controller and your keyboard, after the profile set up you don't have to think of keycodes, or axes or insanity, just worry about what's important.<br/>
 
 Simplify the commands in the game so you don't have to go through the insanity.
@@ -51,7 +63,7 @@ First of all load this in your project, don't worry it wont bite, it's in it's o
 
 ### Step2
 ### IMPORTANT
-* Open the folder STARTING_UP inside it theres a file called InputManager.asset
+* Open the folder STARTING_UP inside it there's a file called InputManager.asset
 
 * Copy
 ```
