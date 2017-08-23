@@ -156,14 +156,14 @@ Each Button in a controller has an id and these can be in different ports unlike
 Unity's:
 Example 1:
 ```
-       <b> new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE)</b>
+        new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE)
        
         //Type=Controller index=1 buttonType=Analogue         
         //This means the Axis is from a controller, it's index is 1, and it's a Joystick
 ```
 Example 2:
 ```
-        <b>new ButtonModel(AccessType.CONTROLLER, 7,ButtonType.BUTTON)</b>
+        new ButtonModel(AccessType.CONTROLLER, 7,ButtonType.BUTTON)
         
         //Type=Controller index=1 buttonType=Button        
         //This means the button is from a controller, it's index is 7, and it's a Button
@@ -174,7 +174,7 @@ Example 2:
 ```
 Example 3:
 ```
-        <b>new ButtonModel(AccessType.PC, 31)</b> 
+        new ButtonModel(AccessType.PC, 31)
         
         //Type=PC index=31 buttonType=Button        
         //This means the button is from the computer (keyboard or mouse),
@@ -182,13 +182,14 @@ Example 3:
 ```
 Example 4:
 ```
-        <b>new ButtonModel(AccessType.CONTROLLER, 2, ButtonType.ANALOGUE_REVERSED)</b>
+        new ButtonModel(AccessType.CONTROLLER, 2, ButtonType.ANALOGUE_REVERSED)
         
         //Type=Controller index=2 buttonType=Analogue Reversed               
         //This means the Axis is from a controller, it's index is 2, and it's a Joystick.
         //The difference here is that the ANALOGUE_REVERSED button type reverses the axis.
         //This is useful when you want to grab a joystick angle as a button which the system does.
 ```
+* Assign these button models into your own controller profile (step 5) and assign that profile to the controller hub (step 4).
 
 ###             BUT How do I get the Index? you ask?
 Simple as long as Debug is Enabled F12 acts as an input mapper of sorts, ProInputOptions.DEBUG_ENABLED is true by default.
