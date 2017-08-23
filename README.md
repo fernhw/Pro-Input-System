@@ -85,12 +85,15 @@ All set up, now we Init the system:
 * Simpler example:
 
 ```
+
     void Start() {
-         ProInput.Init();
+         ProInput.Init(); //initialize
     }
-        private void Update() {
-        ProInput.UpdateInput(Time.deltaTime);
+    
+    void Update() {
+        ProInput.UpdateInput(Time.deltaTime); //update
     }
+    
 ```
 
 ### Step4, Setting Up The Controllers.
