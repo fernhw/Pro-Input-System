@@ -43,15 +43,6 @@ ProInput system is simple to use once it's set up. The system has 3 controller p
 ```
 * Combined action, the reason why this system was a must make for me.
 ```
-/*
-Buttons are
-UpDpad,DownDpad, LeftDpad, RightDpad, A, B, X, Y, L, R, L2, R2, JoyClickLeft, JoyClickRight, Start, Select
-Axis are
-RightStick, LeftStick
-*/
-```
-* Combined action, the reason why this system was a must make for me.
-```
 //Pressing UP in the DPad, or Key UP, or W (Wasd) will return true
         if (ProInput.UpDpad) { 
             //Do stuff
