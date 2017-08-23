@@ -41,7 +41,15 @@ ProInput system is simple to use once it's set up. The system has 3 controller p
             //Shoot
         }
 ```
-
+* Combined action, the reason why this system was a must make for me.
+```
+/*
+Buttons are
+UpDpad,DownDpad, LeftDpad, RightDpad, A, B, X, Y, L, R, L2, R2, JoyClickLeft, JoyClickRight, Start, Select
+Axis are
+RightStick, LeftStick
+*/
+```
 * Combined action, the reason why this system was a must make for me.
 ```
 //Pressing UP in the DPad, or Key UP, or W (Wasd) will return true
@@ -51,9 +59,25 @@ ProInput system is simple to use once it's set up. The system has 3 controller p
 //Professional games have multiple inputs so people get to change quickly to their pcs without a moment's notice.
 ```
 
-
-
 * This picks up UpDpad or L from all 3 controller profiles you can swap with both controller and your keyboard, after the profile set up you don't have to think of keycodes, or axes, or your sanity dripping out of your ear, just worry about what's important.<br/>
+
+* Joysticks are accesible and grant you Angle, Distance, Cosine, and Sine, all extremely useful.
+```
+        //I use this in my game to move the character
+        prototypePoint.moveX(ProInput.RightStick.Cosine*ProInput.RightStick.Distance*charSpeed, delta);
+        prototypePoint.moveZ(-ProInput.RightStick.Sine*ProInput.RightStick.Distance*charSpeed, delta);
+```
+* The joysticks, populated with useful stuff for in-game stuff.
+```
+        ProInput.LeftStick // Left Joystick
+        ProInput.RightStick // Left Joystick
+        
+        ProInput.RightStick.Coords; //Vector2 return X and Y as is
+        ProInput.RightStick.Distance; // 0-1 movement from the center of the stick.
+        ProInput.RightStick.Angle; //Angle in radians
+        ProInput.RightStick.isActive; // is movement of the joystick outside of it's deadzone
+        ProInput.GetDirectionals() //Get and emulated D-Pad (UpKey, DownKey, LeftKey, RightKey) great for UI
+```
 
 * Simplify the input commands in the game so you worry only about the game.
 
