@@ -193,27 +193,22 @@ Example 4:
 ###             BUT How do I get the Index? you ask?
 Simple as long as Debug is Enabled F12 acts as an input mapper of sorts, ProInputOptions.DEBUG_ENABLED is true by default.
 
-* If proInput is set up and you press F12 during runtime you will get this in the console.
+* If proInput is set up and you press F12 during runtime you will get this in the console:
 
 ```
         "-- Press Any Key, Or touch any Stick --"
 ```
 * Press ANY KEY or Move ANY Joystick either from the keyboard or controller in hand.
-You get this:
+You get this in the console:
 ```
         new ButtonModel(AccessType.PC, 128, ButtonType.BUTTON))
 ```
+* Copy it to your key of choice in a profile. And populate a new controller.
+* Assign new controller profile to one of the 3 controllers or access it in your game.
+* Each controller has buttons directly accessible use the different classes as you see fit.
 
 ButtonModel it's an abstract class to create a button, buttons need 3 pieces of data.
 Accesstype
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Built With
 
@@ -227,8 +222,8 @@ Please read [CONTRIBUTING.md](CONTRIBUTING) for details on our code of conduct, 
 
 * **Fernando Holguin W** - *Amy's Escape* - [@fern_hw](https://github.com/fernhw)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+#Thanks for reading and please enjoy and help improve the project.
