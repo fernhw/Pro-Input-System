@@ -9,7 +9,7 @@ Unity's input system to put it in simple terms, sucks, you can't save controller
 
 I tried other controller systems and none gave me the control I wanted, they all where all, no.<br/>
 
-This was created for OOP programmers like myself who want a good amount of customization and control this is not for beginners looking for an easy way. Help me improve this and make it better, tools for people like us tend to not be very good.<br/>
+This was created for OOP programmers like myself who want a good amount of customization and control this is not for beginners looking for an easy way. Help me improve this and make it better.<br/>
 
 This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo JOYCONs but I want to have it eventually detect these and change profiles on the fly.<br/>
 
