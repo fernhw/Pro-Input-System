@@ -281,3 +281,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING) for details on our code of conduct, 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 #Thanks for reading and please enjoy and help improve the project.
+
+## Notes by the author.
+
+This system was created for Amy's Escape, a game I'm working on please support it by following it
+@amysEscapeGame (twitter)
+amysescape.com (website)
