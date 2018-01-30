@@ -7,7 +7,7 @@ Unity doesn't have this out of the box WHY!? I Don't Know...<br/>
 
 Unity's input system to put it in simple terms, sucks, you can't save controllers or even have full control of simple stuff like joystick axes without having to go through several hoops, and going through unity's regular controller mapping box is a pain, and let's be honest-- it's painfully awful.<br/>
 
-I tried other controller systems and none gave me the control I wanted, they all where all, no.<br/>
+I tried other controller systems and was terribly dissapointed.<br/>
 
 This was created for OOP programmers like myself who want a good amount of customization and control this is not for beginners looking for an easy way. Help me improve this and make it better.<br/>
 
