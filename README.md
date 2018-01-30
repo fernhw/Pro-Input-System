@@ -27,11 +27,13 @@ This is still in development and at the moment the thing is not where I want it 
 ## Getting Started
 ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem:
 
-* the main joystick controller (an Xbox360 controller like profile)
-* the keyboard and mouse counterpart
+* The main joystick controller. (an Xbox1/Ps4 like controller)
+* The keyboard and mouse counterpart.
 * A 2nd keyboard and mouse based controller.
 
-Why 2 pc controllers? to have <u>alternate</u> keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.<br/>
+Why 2 pc controllers? to have <u>alternate</u> keys, when you play a pc game you want the user to have more than one action button if they want, keyboards are big, you can ignore the third controller if you want.<br/> You can run as many as 11 joystick controllers in tandem with this system.
+
+
 
 * After set up is complete all you need is:<br/>
 
