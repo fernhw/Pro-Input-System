@@ -1,6 +1,6 @@
 
 /** 
- * Copyright (c) 2011-2017 Fernando Holguín Weber , and Studio Libeccio - All Rights Reserved
+ * Copyright (c) 2011-2017 Fernando HolguÃ­n Weber , and Studio Libeccio - All Rights Reserved
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy of the ProInputSystem 
  * and associated documentation files (the "Software"), to deal in the Software without restriction,
@@ -17,7 +17,7 @@
  * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
- * Fernando Holguín Weber, <contact@fernhw.com>,<http://fernhw.com>,<@fern_hw>
+ * Fernando HolguÃ­n Weber, <contact@fernhw.com>,<http://fernhw.com>,<@fern_hw>
  * Studio Libeccio, <@studiolibeccio> <studiolibeccio.com>
  * 
  */
@@ -28,7 +28,7 @@ using System.Collections;
 
 namespace ProInputSystem {
     /// <summary>
-    /// <para>BUTTON is to say this button is boolean</para>
+    /// <para>BUTTON is to say this input is a boolean input</para>
     /// <para>ANALOGUE_REVERSED is created to reverse analogue input.</para>
     /// <para>ANALOGUE regular analogue data.</para>
     /// </summary>
