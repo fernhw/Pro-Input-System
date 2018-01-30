@@ -126,10 +126,18 @@ All set up, now we Init the system:
     }
     
     void Update() {
-        ProInput.UpdateInput(Time.deltaTime); //update
+        // update system
+        ProInput.UpdateInput(Time.deltaTime); 
+        
+         if (ProInput.L) {
+            // Shoot
+        }
+        
     }
     
 ```
+
+
 
 ### Step4, Setting Up The Controllers.
 Setting up. Go to Models/ControllerHub<br/>
