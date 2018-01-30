@@ -16,13 +16,15 @@ This is still in development and at the moment the thing is not where I want it 
 ## What special about it.
 
 * It stores Controller Profiles for easy access.<br/>
-* It uses active mappings of the controller and the keyboard as one.
-* It stores and returns angle distance and position of joystick automatically
-* It can return Joystick movements as buttons, if you press joystick up you can set it up as a button press.
-* It lets you remap joysticks without having to explore all human known axises one by one.
+* It has a very well constructed <b>joystick emulator</b> that's way better than unity's.
+* It can use both the controller and the keyboard as one. with <b>globalController</b>
+* It stores and returns angle distance and position of joystick automatically for easy use in-game.
+* It can use Joystick movements as buttons, if you press joystick up you can set it up as a button press.
+* (Not yet) It lets you remap joysticks automatically
 * (Not yet) It has native remapping.
-* It has a sweet set of debugging systems in it.
-* It's free.
+* (Not yet) Use up to 11 individually mapped joystick controllers.
+* (Not yet) It has a sweet set of debugging systems in it.
+* It's free. MIT license. Go nuts.
 
 ## Getting Started
 ProInput system is simple to use once it's set up. The system has 3 controller profiles that run in tandem:
@@ -82,7 +84,7 @@ Why 2 pc controllers? to have <u>alternate</u> keys, when you play a pc game you
 
 # Let's Begin
 ### Step1 
-First of all load this in your project, don't worry it wont bite, it's in it's own namespace titled ProInputSystem, comes with a class outside of the namespace called ProInput, that's your access point.
+First of all copy it to your project, don't worry it wont bite, it's in it's own namespace titled ProInputSystem, comes with a class outside of the namespace called ProInput, that's your access point. I would rather you clone the whole thing <u>inside</u> your project so you can ask for pull requests, or improvements to the overall system, or you know... update it.
 
 ### Step2
 ### IMPORTANT
