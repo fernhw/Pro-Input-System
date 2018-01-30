@@ -205,14 +205,16 @@ Unity's:
 Example 1:
 ```
         new ButtonModel(AccessType.CONTROLLER, 1, ButtonType.ANALOGUE)
-       
+```
+```
         //Type=Controller index=1 buttonType=Analogue         
         //This means the Axis is from a controller, it's index is 1, and it's a Joystick
 ```
 Example 2:
 ```
         new ButtonModel(AccessType.CONTROLLER, 7,ButtonType.BUTTON)
-        
+```
+```
         //Type=Controller index=1 buttonType=Button        
         //This means the button is from a controller, it's index is 7, and it's a Button
         
@@ -223,15 +225,18 @@ Example 2:
 Example 3:
 ```
         new ButtonModel(AccessType.PC, 31)
-        
-        //Type=PC index=31 buttonType=Button        
+```
+
+```
+        //Type=PC (this means it's the keyboard) index=31 buttonType=Button (default)       
         //This means the button is from the computer (keyboard or mouse),
         //it's index is 31, and it's a Button.
 ```
 Example 4:
 ```
         new ButtonModel(AccessType.CONTROLLER, 2, ButtonType.ANALOGUE_REVERSED)
-        
+```
+```
         //Type=Controller index=2 buttonType=Analogue Reversed               
         //This means the Axis is from a controller, it's index is 2, and it's a Joystick.
         //The difference here is that the ANALOGUE_REVERSED button type reverses the axis.
