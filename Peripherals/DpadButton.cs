@@ -22,10 +22,9 @@
  * 
  */
 
-using ProInputSystem.Interfaces;
 
 //**Button Managed Dpad*/
-namespace ProInputSystem.Peripherals {
+namespace ProInputSystem {
 
     public class DpadButton:DirectionalKeys {
 

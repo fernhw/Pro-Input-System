@@ -24,14 +24,13 @@
  */
 
 using UnityEngine;
-using ProInputSystem.Interfaces;
 using System.Collections.Generic;
 
 /// <summary>
 /// Manage inputs form several IButtons at the same time.
 /// </summary>
 /// 
-namespace ProInputSystem.Systems {
+namespace ProInputSystem {
     public class MultiButton : BaseInputClass, IButton {
         
         List<IButton> buttons;

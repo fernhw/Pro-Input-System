@@ -22,7 +22,7 @@
  * 
  */
 
-namespace ProInputSystem.Interfaces {
+namespace ProInputSystem {
     public interface IButton {
         bool Enabled { get; }
         bool IsPressed();

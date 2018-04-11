@@ -21,9 +21,8 @@
  * Studio Libeccio, <@studiolibeccio> <studiolibeccio.com>
  * 
  */
-using ProInputSystem.Peripherals;
 
-namespace ProInputSystem.Interfaces {
+namespace ProInputSystem {
 
     /// <summary>
     /// Promises returning all the data any 20 input Xbox360 like controller has.

@@ -21,10 +21,6 @@
  * 
  */
 
-using ProInputSystem.Peripherals;
-using ProInputSystem.Models;
-using ProInputSystem.Interfaces;
-
 namespace ProInputSystem {
 
     ///<summary>

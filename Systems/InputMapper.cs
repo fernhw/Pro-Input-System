@@ -26,8 +26,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /**Aiding class to map a new controller*/
-namespace ProInputSystem.Systems {
-	using ProInputSystem.Models;
+namespace ProInputSystem {
     
     public static class InputMapper{
 

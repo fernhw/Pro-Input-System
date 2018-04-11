@@ -26,9 +26,7 @@ using UnityEngine;
 * 
 */
 
-namespace ProInputSystem.Systems {
-	using ProInputSystem.Peripherals;
-	using ProInputSystem.Interfaces;
+namespace ProInputSystem {
 	
     /// <summary>
     /// Combine the information of 3 joysticks, designed for the global controller

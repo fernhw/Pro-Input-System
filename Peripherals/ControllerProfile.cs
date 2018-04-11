@@ -22,7 +22,7 @@
  * 
  */
 
-namespace ProInputSystem.Peripherals {
+namespace ProInputSystem {
    
     /**Requires ButtonModel data, any button not in the construtor is considered NOT enabled*/
     public class ControllerProfile {

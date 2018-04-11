@@ -26,7 +26,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ProInputSystem.Models {
+namespace ProInputSystem {
 
     public class InputNames
     {

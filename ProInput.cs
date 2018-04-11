@@ -24,10 +24,6 @@
 
 using UnityEngine;
 using ProInputSystem;
-using ProInputSystem.Peripherals;
-using ProInputSystem.Systems;
-using ProInputSystem.Settings;
-using ProInputSystem.Interfaces;
 /*
 *          IMPORTANT NOTE
 *

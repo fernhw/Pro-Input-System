@@ -24,10 +24,7 @@
 using UnityEngine;
 using MathUtils;
 
-using ProInputSystem.Systems;
-using ProInputSystem.Settings;
-
-namespace ProInputSystem.Peripherals {
+namespace ProInputSystem {
 
     ///<summary>
     /// <para>Up, Down, Left, Right</para>

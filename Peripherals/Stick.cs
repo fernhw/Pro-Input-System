@@ -23,10 +23,8 @@
  */
 
 using UnityEngine;
-using ProInputSystem.Interfaces;
-
 /** Turns two analogue buttons into Analogue Input Abstract, needs to be updated*/
-namespace ProInputSystem.Peripherals {
+namespace ProInputSystem {
     
     public class Stick : AnalogueInput {
         bool isJoystickUndefined = false;

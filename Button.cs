@@ -23,9 +23,6 @@
  */
 
 using UnityEngine;
-using ProInputSystem.Models;
-using ProInputSystem.Settings;
-using ProInputSystem.Interfaces;
 
 namespace ProInputSystem {
 

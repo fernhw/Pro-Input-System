@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace ProInputSystem.Settings {
+namespace ProInputSystem {
 
     class DebugKeys {
         

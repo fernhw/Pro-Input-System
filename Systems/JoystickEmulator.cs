@@ -22,10 +22,8 @@
  */
 
 using UnityEngine;
-using ProInputSystem.Peripherals;
-using ProInputSystem.Settings;
 
-namespace ProInputSystem.Systems {
+namespace ProInputSystem {
 
     /**
      * Create a joystick from directional keys.

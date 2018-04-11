@@ -23,13 +23,12 @@
  */
  
 
-using ProInputSystem.Peripherals;
 using System.Collections.Generic;
 
-namespace ProInputSystem.Models {
+namespace ProInputSystem {
 
     /// <summary>
-    /// <para>ProInputSystem.Models.Profiles</para>
+    /// <para>ProInputSystem.Profiles</para>
     /// <para>Controller profiles setup as X360 controllers.</para>
     /// Storing all controller configurations for further use.
     /// </summary>

@@ -1,9 +1,7 @@
 ﻿
 using System.Collections.Generic;
-using ProInputSystem.Systems;
-using ProInputSystem.Interfaces;
 
-namespace ProInputSystem.Peripherals {
+namespace ProInputSystem {
     /**
    * Button Model is Data used to CREATE a button, this data is kept simple to write.
    */

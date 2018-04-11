@@ -24,9 +24,8 @@
 
 using UnityEngine;
 using MathUtils;
-using ProInputSystem.Settings;
 
-namespace ProInputSystem.Peripherals {
+namespace ProInputSystem {
 	/// <summary>
 	/// Analogue input is joystick coordinates but also returns angles and distance.
     /// This is the abstract class for the sticks not the actual joysticks
@@ -59,7 +58,7 @@ namespace ProInputSystem.Peripherals {
 
         public void UpdateFromCoords(Vector2 coords) {
             Angle = Mathf.Atan2(coords.y, coords.x);
-            float distanceBetweenCoords = UtilsMath.VectorDistance(coords.x, coords.y);
+            float distanceBetweenCoords = Utils.VectorDistance(coords.x, coords.y);
             if (distanceBetweenCoords>1f) {
                 distanceBetweenCoords = 1f;
             }

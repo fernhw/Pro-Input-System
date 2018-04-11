@@ -24,7 +24,7 @@
 
 using UnityEngine;
 
-namespace ProInputSystem.Settings {
+namespace ProInputSystem {
 static class ControllerSettings  {
 
 //not indented on purpose, don't indent.

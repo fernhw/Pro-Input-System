@@ -22,8 +22,7 @@
  * 
  */
  
-using ProInputSystem.Interfaces;
-namespace ProInputSystem.Peripherals.DataStructures {
+namespace ProInputSystem {
     //Controller button layout
     public class ControllerData {
        public int controllerIndex = 0;

@@ -23,12 +23,9 @@
  */
 
 using System.Collections.Generic;
-using ProInputSystem.Systems;
-using ProInputSystem.Interfaces;
 using MathUtils;
-using ProInputSystem.Peripherals.DataStructures;
 
-namespace ProInputSystem.Peripherals {
+namespace ProInputSystem {
 
     public class GlobalController : ControllerBase, IController {
 

@@ -23,14 +23,11 @@
  */
 
 using System.Collections.Generic;
-using ProInputSystem.Systems;
-using ProInputSystem.Interfaces;
-using ProInputSystem.Peripherals.DataStructures;
 //using MathUtils;
 /**
  * The physical controller, all joysticks and buttons.
 */
-namespace ProInputSystem.Peripherals {
+namespace ProInputSystem {
     public class Controller:ControllerBase, IController {
 
         MultiButton combinedA;
