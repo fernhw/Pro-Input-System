@@ -26,7 +26,7 @@ using System.Collections.Generic;
 using ProInputSystem.Systems;
 using ProInputSystem.Interfaces;
 using ProInputSystem.Peripherals.DataStructures;
-using MathUtils;
+//using MathUtils;
 /**
  * The physical controller, all joysticks and buttons.
 */

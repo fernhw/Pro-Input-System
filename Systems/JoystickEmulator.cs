@@ -52,10 +52,8 @@ namespace ProInputSystem.Systems {
         DirectionalKeys directionalKeys;
 
         public JoystickEmulator(DirectionalKeys KeysToEmulate) {
-
             directionalKeys = KeysToEmulate;
             _joystick = new AnalogueInput();
-
         }
 
         public void Update( float delta ) {
