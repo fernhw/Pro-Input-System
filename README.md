@@ -13,7 +13,7 @@ This was created for OOP programmers like myself who want a good amount of custo
 
 This is still in development and at the moment the thing is not where I want it to be, it works you can map controllers with the files in the Models folder, give it a whirl. It works out of the box with the XBOX360 controller, and Nintendo JOYCONs but I want to have it eventually detect these and change profiles on the fly.<br/>
 
-## What special about it.
+## What so special about it.
 
 * It stores Controller Profiles for easy access.<br/>
 * It has a very well constructed <b>joystick emulator</b> that's way better than unity's.
@@ -37,17 +37,17 @@ Why 2 pc controllers? to have <u>alternate</u> keys, when you play a pc game you
 
 
 
-* After set up is complete all you need is:<br/>
+* After everything's set up, all you need to do is:<br/>
 
 ```
-        if (ProInput.UpDpad) { 
+        if (ProInput.UpDpad) { //pressing up in the DPad.
             //Do stuff
         }
 ```
 
 * Or,
 ```
-        if (ProInput.L) {
+        if (ProInput.L) { //pressing L in the controller.
             //Shoot
         }
 ```
